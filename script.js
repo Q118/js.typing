@@ -3,6 +3,8 @@
 
 const RANDOM_QUOTE_API_URL = 'http://api.quotable.io/random'
 
+const quoteDisplayElement = document.getElementById('quoteDisplay')
+
 function getRandomQuote() {
     return fetch(RANDOM_QUOTE_API_URL)
         .then(response => response.json())
@@ -10,11 +12,13 @@ function getRandomQuote() {
 
 }
 
-async function getNextQuote() {
+async function renderNewQuote() {
     const quote = await getRandomQuote()
+
+quoteDisplayElement.innerText = quote;
 
     console.log(quote)
     
 }
 
-getNextQuote()
+renderNewQuote()
