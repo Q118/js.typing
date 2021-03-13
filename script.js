@@ -1,7 +1,7 @@
 //using the random quotes api for now
 //TOdo find soemthing that will include symbals and such for dev typers so code and such like random lines of code?
 
-const RANDOM_QUOTE_API_URL = 'http://api.quotable.io/random'
+const RANDOM_QUOTE_API_URL = 'https://api.quotable.io/random'
 const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 const timerElement = document.getElementById('timer')
