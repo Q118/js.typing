@@ -7,6 +7,8 @@ const quoteDisplayElement = document.getElementById('quoteDisplay')
 
 const quoteInputElement = document.getElementById('quoteInput')
 
+quoteInput
+
 
 function getRandomQuote() {
     return fetch(RANDOM_QUOTE_API_URL)
@@ -23,6 +25,9 @@ async function renderNewQuote() {
 //get each individual character of our string, creating a sapn for and and then setting the text of that span to that individual character
 quote.split('').forEach(character => {
     const characterSpan = document.createElement('span')
+    
+    //characterSpan.classList.add('incorrect')
+
     characterSpan.innerText = character
     quoteDisplayElement.appendChild(characterSpan)
 })
