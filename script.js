@@ -12,23 +12,27 @@ quoteInputElement.addEventListener('input', () => {
     const arrayQuote = quoteDisplayElement.querySelectorAll('span')
     const arrayValue = quoteInputElement.value.split('')
 
+
+    let correct = true
     arrayQuote.forEach((characterSpan, index) => {
         const character = arrayValue[index]
-        if(character == null) {
+        if (character == null) {
             characterSpan.classList.remove('correct')
             characterSpan.classList.remove('incorrect')
-        }else if(character === characterSpan.innerText) {
+            correct = false;
+        } else if (character === characterSpan.innerText) {
             characterSpan.classList.add('correct')
             characterSpan.classList.remove('incorrect')
         } else {
             characterSpan.classList.remove('correct')
             characterSpan.classList.add('incorrect')
+            correct = false;
         }
 
 
     })
 
-
+    if (correct) renderNewQuote()
 })
 
 
@@ -44,15 +48,15 @@ async function renderNewQuote() {
 
     quoteDisplayElement.innerHTML = '';
 
-//get each individual character of our string, creating a sapn for and and then setting the text of that span to that individual character
-quote.split('').forEach(character => {
-    const characterSpan = document.createElement('span')
-    
-    //characterSpan.classList.add('incorrect')
+    //get each individual character of our string, creating a sapn for and and then setting the text of that span to that individual character
+    quote.split('').forEach(character => {
+        const characterSpan = document.createElement('span')
 
-    characterSpan.innerText = character
-    quoteDisplayElement.appendChild(characterSpan)
-})
+        //characterSpan.classList.add('incorrect')
+
+        characterSpan.innerText = character
+        quoteDisplayElement.appendChild(characterSpan)
+    })
 
     quoteInputElement.value = null
 
