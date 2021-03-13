@@ -7,7 +7,27 @@ const quoteDisplayElement = document.getElementById('quoteDisplay')
 
 const quoteInputElement = document.getElementById('quoteInput')
 
-quoteInput
+//this input element or event listener gets called every single time something inside of the input box changes
+quoteInputElement.addEventListener('input', () => {
+    const arrayQuote = quoteDisplayElement.querySelectorAll('span')
+    const arrayValue = quoteInputElement.value.split('')
+
+    arrayQuote.forEach((characterSpan, index) => {
+        const character = arrayValue[index]
+
+        if(character === characterSpan.innerText) {
+            characterSpan.classList.add('correct')
+            characterSpan.classList.remove('incorrect')
+        } else {
+            characterSpan.classList.remove('correct')
+            characterSpan.classList.add('incorrect')
+        }
+
+
+    })
+
+
+})
 
 
 function getRandomQuote() {
