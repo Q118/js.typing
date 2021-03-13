@@ -9,3 +9,12 @@ function getRandomQuote() {
         .then(data => data.content)
 
 }
+
+async function getNextQuote() {
+    const quote = await getRandomQuote()
+
+    console.log(quote)
+    
+}
+
+getNextQuote()
