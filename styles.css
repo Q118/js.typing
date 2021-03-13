@@ -16,7 +16,7 @@ body, .quote-input {
 }
 
 .container {
-    background-color: coral;
+    background-color: darkblue;
     padding: 1em;
     border-radius: .5rem;
     width: 700px;
@@ -27,7 +27,7 @@ body, .quote-input {
     position: absolute;
     top: 2em;
     font-size: 4rem;
-    color: coral;
+    color: darkslateblue;
 }
 
 .quote-display {
