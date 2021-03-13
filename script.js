@@ -14,8 +14,10 @@ quoteInputElement.addEventListener('input', () => {
 
     arrayQuote.forEach((characterSpan, index) => {
         const character = arrayValue[index]
-
-        if(character === characterSpan.innerText) {
+        if(character == null) {
+            characterSpan.classList.remove('correct')
+            characterSpan.classList.remove('incorrect')
+        }else if(character === characterSpan.innerText) {
             characterSpan.classList.add('correct')
             characterSpan.classList.remove('incorrect')
         } else {
