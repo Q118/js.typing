@@ -21,6 +21,10 @@
   }
   
 
+.green {
+    background-color: chartreuse;
+}
+
   kbd {
     display: block;
     font-size: 4rem;
