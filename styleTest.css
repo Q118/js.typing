@@ -1,0 +1,125 @@
+html {
+    font-size: 10px;
+    background-image: url('./background.jpg');
+    background-size: cover;
+  }
+  
+  mark {
+    background-color: azure;
+    color: blue;
+    font-size: 3em;
+    border-radius: 4px;
+    margin: 7px;
+  }
+  
+  
+  body,html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  .keys {
+    display: flex;
+    flex: 1;
+    /* min-height: 100vh; */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .key {
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+  }
+  
+  .playing {
+    transform: scale(1.2);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+  }
+  
+  kbd {
+    display: block;
+    font-size: 4rem;
+  }
+  
+  .sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+  }
+  
+  
+  
+  .button {
+    border-radius: 4px;
+    background-color: #ffc600;
+    background-blend-mode: lighten; 
+    border-color: black;
+    border-width: 4px;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-left: 300px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  .keyboard {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background-color: pink;
+    min-height: 100px;
+    border: #ffc600 7px groove; 
+  }
+  .keyLabel {
+    text-align: center;
+  }
+  
+  .mark2 {
+    color: lightpink;
+    background-color: rgb(80, 76, 76);
+    border: #ffc600 7px groove; 
+    padding: 5px;
+    width: min-content;
+  }

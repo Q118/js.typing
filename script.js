@@ -13,16 +13,21 @@ const myKeyboard = new Keyboard({
   onKeyPress: button => onKeyPress(button)
 });
 
-
 // function onChange(input) {
 //   document.querySelector(".input").value = input;
 //   console.log("Input changed", input);
 // }
 
-
 function onKeyPress(button) {
   console.log("Button pressed", button);
 }
+
+function keyCode(event) {
+    var x = event.keyCode;
+    if (x == 27) {
+      alert ("You pressed the Escape key!");
+    }
+  }
 
 //this input element or event listener gets called every single time something inside of the input box changes
 quoteInputElement.addEventListener('input', () => {
