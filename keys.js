@@ -66,9 +66,10 @@ window.addEventListener('keypress', function (e) {
         document.querySelector(".comma").classList.add("green")
     } else if (e.key === '.') {
         document.querySelector(".period").classList.add("green")
-    } else {
+    } else if (e.key === '/'){
         document.querySelector(".slash").classList.add("green")
-
+    } else {
+        console.log("not in the scope")
     }
 
 });
